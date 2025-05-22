@@ -31,7 +31,10 @@ jobs:
 
       - name: Commit updated purls.txt if changed
         run: |
-          echo "purls.txt changed, committing.."
-          git add purls.txt || echo "No purls.txt to add"
-          git commit -m "chore: update purls.txt"
-          git push origin "${{ github.head_ref }}"
+          if git diff --quiet --exit-code purls.txt; then
+            echo "No changes to purls.txt"
+          else
+            git add purls.txt
+            git commit -m "chore: update purls.txt"
+            git push origin "${{ github.head_ref }}"
+          fi
