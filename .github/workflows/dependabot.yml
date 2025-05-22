@@ -32,6 +32,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit updated purls.txt if changed
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}  
         run: |
           echo "Changes to purls.txt:"
           if git diff --exit-code purls.txt; then
@@ -39,5 +41,5 @@ jobs:
           else 
             git add purls.txt
             git commit -m "chore: update purls.txt"
-            git push origin "${{ github.head_ref }}"
+            git push origin "$BRANCH_NAME"
           fi
