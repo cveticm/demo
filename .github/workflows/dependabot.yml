@@ -17,7 +17,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.1
         with:
-          fetch-depth: 2
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
       - name: Run make
         run: |
@@ -33,4 +34,4 @@ jobs:
           echo "purls.txt changed, committing.."
           git add purls.txt || echo "No purls.txt to add"
           git commit -m "chore: update purls.txt"
-          git push
+          git push origin "${{ github.head_ref }}"
