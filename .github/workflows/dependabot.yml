@@ -12,7 +12,7 @@ jobs:
     name: Run make
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.1
@@ -33,4 +33,4 @@ jobs:
           echo "purls.txt changed, committing.."
           git add purls.txt || echo "No purls.txt to add"
           git commit -m "chore: update purls.txt"
-          git push origin HEAD
+          git push
