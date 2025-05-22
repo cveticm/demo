@@ -12,8 +12,8 @@ require (
 	github.com/Netflix/go-expect v0.0.0-20220104043353-73e0943537d2
 	github.com/PaesslerAG/jsonpath v0.1.0
 	github.com/ProtonMail/go-crypto v1.2.0
-	github.com/aws/aws-sdk-go-v2 v1.30.0
-	github.com/aws/aws-sdk-go-v2/config v0.1.0
+	github.com/aws/aws-sdk-go-v2 v1.36.0
+	github.com/aws/aws-sdk-go-v2/config v1.29.0
 	github.com/aws/aws-sdk-go-v2/credentials v1.17.0
 	github.com/aws/aws-sdk-go-v2/service/kms v1.37.0
 	github.com/bradleyjkemp/cupaloy/v2 v2.8.0
@@ -55,9 +55,9 @@ require (
 	golang.org/x/net v0.20.0
 	golang.org/x/sys v0.20.0
 	golang.org/x/tools v0.23.0
-	google.golang.org/api v0.2.0
-	google.golang.org/grpc v1.7.0
-	google.golang.org/protobuf v1.0.0
+	google.golang.org/api v0.233.0
+	google.golang.org/grpc v1.72.1
+	google.golang.org/protobuf v1.36.6
 	gopkg.in/yaml.v3 v3.0.1
 )
 
