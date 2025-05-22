@@ -34,7 +34,8 @@ jobs:
 
       - name: Commit updated purls.txt if changed
         run: |
-          if git diff --quiet --exit-code purls.txt; then
+          echo "Changes to purls.txt:"
+          if git diff --exit-code purls.txt; then
             echo "No changes to purls.txt"
           else
             git add purls.txt
