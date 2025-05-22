@@ -37,7 +37,7 @@ jobs:
           echo "Changes to purls.txt:"
           if git diff --exit-code purls.txt; then
             echo "No changes to purls.txt"
-          else
+          else 
             git add purls.txt
             git commit -m "chore: update purls.txt"
             git push origin "${{ github.head_ref }}"
