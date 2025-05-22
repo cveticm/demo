@@ -28,7 +28,7 @@ jobs:
 
       - name: Commit updated purls.txt if changed
         run: |
-          echo "purls.txt changed, committing..."
+          echo "purls.txt changed, committing.."
           git add purls.txt || echo "No purls.txt to add"
           git commit -m "chore: update purls.txt"
           git push origin HEAD
